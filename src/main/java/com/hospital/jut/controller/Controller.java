@@ -22,7 +22,7 @@ import com.hospital.jut.model.Model;
 import com.hospital.jut.repository.Repository;
 
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api")
 
