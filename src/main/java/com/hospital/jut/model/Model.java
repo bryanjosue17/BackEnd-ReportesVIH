@@ -33,8 +33,8 @@ public class Model {
 	@Column(name = "no_hoja", length = 50, nullable = false)
 	private String no_hoja;
 
-	@Column(name = "fecha_hoja", length = 50, nullable = false)
-	private String fecha_hoja;
+	@Column(name = "date", length = 50, nullable = false)
+	private String date;
 
 	/**
 	 * 
@@ -130,7 +130,7 @@ public class Model {
 	@Column(name = "datetime")
 	private String datetime;
 	
-	public Model(String responsable, String tipo_cargo, String tipo_servicio, String no_hoja, String fecha_hoja,
+	public Model(String responsable, String tipo_cargo, String tipo_servicio, String no_hoja, String date,
 			String no_orden, String dia_consulta, String primer_nombre, String segundo_nombre, String primer_apellido,
 			String segundo_apellido, String cui, String nacionalidad, String departamento_nac, String municipio_nac,
 			String fecha_nac, String lugar_poblado, String sexo, String orientacion_sexual, String identidad_genero,
@@ -144,7 +144,7 @@ public class Model {
 		this.tipo_cargo = tipo_cargo;
 		this.tipo_servicio = tipo_servicio;
 		this.no_hoja = no_hoja;
-		this.fecha_hoja = fecha_hoja;
+		this.date = date;
 		this.no_orden = no_orden;
 		this.dia_consulta = dia_consulta;
 		this.primer_nombre = primer_nombre;
@@ -220,12 +220,12 @@ public class Model {
 		this.no_hoja = no_hoja;
 	}
 
-	public String getFecha_hoja() {
-		return fecha_hoja;
+	public String getDate() {
+		return date;
 	}
 
-	public void setFecha_hoja(String fecha_hoja) {
-		this.fecha_hoja = fecha_hoja;
+	public void setDate(String date) {
+		this.date = date;
 	}
 
 	public String getNo_orden() {
@@ -495,7 +495,7 @@ public class Model {
 	@Override
 	public String toString() {
 		return "Model [id_reporte=" + id_reporte + ", responsable=" + responsable + ", tipo_cargo=" + tipo_cargo
-				+ ", tipo_servicio=" + tipo_servicio + ", no_hoja=" + no_hoja + ", fecha_hoja=" + fecha_hoja
+				+ ", tipo_servicio=" + tipo_servicio + ", no_hoja=" + no_hoja + ", date=" + date
 				+ ", no_orden=" + no_orden + ", dia_consulta=" + dia_consulta + ", primer_nombre=" + primer_nombre
 				+ ", segundo_nombre=" + segundo_nombre + ", primer_apellido=" + primer_apellido + ", segundo_apellido="
 				+ segundo_apellido + ", cui=" + cui + ", nacionalidad=" + nacionalidad + ", departamento_nac="

@@ -33,14 +33,14 @@ public class Controller {
 	Repository repo;
 
 	@GetMapping("/reportes")
-	public ResponseEntity<List<Model>> getAllReportes(@RequestParam(required = false) String nombre) {
+	public ResponseEntity<List<Model>> getAllReportes(@RequestParam(required = false) String date) {
 		try {
 			List<Model> reportes = new ArrayList<Model>();
 
-			if (nombre == null)
+			if (date == null)
 				repo.findAll().forEach(reportes::add);
 			else
-				repo.findByResponsable(nombre).forEach(reportes::add);
+				repo.findByDate(date).forEach(reportes::add);
 
 			if (reportes.isEmpty()) {
 				return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -72,7 +72,7 @@ public class Controller {
 					model.getTipo_cargo(),
 					model.getTipo_servicio(),
 					model.getNo_hoja(),
-					model.getFecha_hoja(),
+					model.getDate(),
 					model.getNo_orden(),
 					model.getDia_consulta(),
 					model.getPrimer_nombre(),
@@ -123,7 +123,7 @@ public class Controller {
 			_model.setTipo_cargo(model.getTipo_cargo());
 			_model.setTipo_servicio(model.getTipo_servicio());
 			_model.setNo_hoja(model.getNo_hoja());
-			_model.setFecha_hoja(model.getFecha_hoja());
+			_model.setDate(model.getDate());
 			_model.setNo_orden(model.getNo_orden());
 			_model.setDia_consulta(model.getDia_consulta());
 			_model.setPrimer_nombre(model.getPrimer_nombre());

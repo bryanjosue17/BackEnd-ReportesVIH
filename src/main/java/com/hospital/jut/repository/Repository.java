@@ -9,6 +9,6 @@ import com.hospital.jut.model.Model;
 
 
 public interface Repository extends JpaRepository<Model, Long> {
-	List<Model> findByResponsable(String nombre);
+	List<Model> findByDate(String date);
 
 }
