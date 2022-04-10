@@ -58,7 +58,7 @@ public class Model {
 	@Column(name = "segundo_apellido")
 	private String segundo_apellido;
 
-	@Column(name = "cui", length = 50, nullable = false)
+	@Column(name = "cui", length = 13, nullable = false)
 	private String cui;
 
 	@Column(name = "nacionalidad", length = 50, nullable = false)
@@ -509,6 +509,10 @@ public class Model {
 				+ resultados_prueba_vih + ", prueba_treponemica=" + prueba_treponemica + ", prueba_no_treponemica="
 				+ prueba_no_treponemica + ", resultado_difucion=" + resultado_difucion + ", referencia=" + referencia
 				+ ", uai_ref=" + uai_ref + ", observaciones=" + observaciones + ", datetime=" + datetime + "]";
+	}
+
+	public Model() {
+		super();
 	}
 
 	
