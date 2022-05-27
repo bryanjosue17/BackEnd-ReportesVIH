@@ -58,7 +58,7 @@ public class Model {
 	@Column(name = "segundo_apellido")
 	private String segundo_apellido;
 
-	@Column(name = "cui", length = 50, nullable = false)
+	@Column(name = "cui", length = 13, nullable = false)
 	private String cui;
 
 	@Column(name = "nacionalidad", length = 50, nullable = false)
@@ -98,16 +98,16 @@ public class Model {
 	@Column(name = "pueblo", length = 50, nullable = false)
 	private String pueblo;
 
-	@Column(name = "comunidad_len", length = 50, nullable = false)
+	@Column(name = "comunidad_len", length = 50)
 	private String comunidad_len;
 
 	@Column(name = "condicion_riesgo", length = 50, nullable = false)
 	private String condicion_riesgo;
 	@Column(name = "motivo_orientacion", length = 50, nullable = false)
 	private String motivo_orientacion;
-	@Column(name = "control_prenatal", length = 50, nullable = false)
+	@Column(name = "control_prenatal", length = 50)
 	private String control_prenatal;
-	@Column(name = "semana_gestacion", length = 50, nullable = false)
+	@Column(name = "semana_gestacion", length = 50)
 	private String semana_gestacion;
 	@Column(name = "orientacion_preprueba", length = 50, nullable = false)
 	private String orientacion_preprueba;
@@ -509,6 +509,10 @@ public class Model {
 				+ resultados_prueba_vih + ", prueba_treponemica=" + prueba_treponemica + ", prueba_no_treponemica="
 				+ prueba_no_treponemica + ", resultado_difucion=" + resultado_difucion + ", referencia=" + referencia
 				+ ", uai_ref=" + uai_ref + ", observaciones=" + observaciones + ", datetime=" + datetime + "]";
+	}
+
+	public Model() {
+		super();
 	}
 
 	
